@@ -1,0 +1,12 @@
+===tabel===
+instansi = 
+tabel_gol = 
+tabel_karyawan = 
+tabel_mutasi = 
+tabel_promosi = 
+tb_user = 
+
+===Menu===
+-Data normatif
+-Mutasi Pegawai
+-Promosi Jabatan
