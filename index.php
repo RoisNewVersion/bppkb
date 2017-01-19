@@ -2,8 +2,8 @@
 <?php 
 session_start();
 include 'layout/header.php';
-include '/layout/menu.php';
-include '/system/fungsi.php';
+include 'layout/menu.php';
+include 'system/fungsi.php';
 $app = new Core();
 $app->check_session('admin');
 

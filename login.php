@@ -62,7 +62,9 @@
 	</style>
 </head>
 <body>
-	<?php include 'system/fungsi.php'; 
+	<?php
+	session_start();
+	include 'system/fungsi.php'; 
 	$cek = new Core();
 	$cek->check_login('admin');
 	?>
