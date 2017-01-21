@@ -27,7 +27,7 @@
 
             <ul class="dropdown-menu" aria-labelledby="dLabel">
                 <a href="karyawan.php">Data Karyawan</a>
-                <a href="golongan.php">Promosi Jabatan</a>
+                <a href="golongan.php">Data Golongan</a>
                 <a href="instansi.php">Data Instansi</a>
                 <a href="pendidikan.php">Data Pendidikan</a>
             </ul>

@@ -125,15 +125,12 @@
 }
 
 /*custom*/
-.toggle-atas{
-  background-color: #E91E63;
-  opacity: 80;
-  padding: 10px;
-  margin: 0px;
-  position: fixed;
-  width: 100%;
+.title-header{
+    text-align: center;
 }
-
-.toggle-atas > a{
-  color: white;
+.tambah{
+    margin-bottom: 5px;
+}
+.ui-widget-header{
+    color: red;
 }

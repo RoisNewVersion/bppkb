@@ -15,6 +15,9 @@
     <link href="css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom CSS -->
+    
+    <link href="css/dataTables.bootstrap.min.css" rel="stylesheet">
+    <link href="css/jquery-ui-1.10.4.min.css" rel="stylesheet">
     <link href="css/simple-sidebar.css" rel="stylesheet">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->

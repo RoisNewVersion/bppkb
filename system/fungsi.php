@@ -4,7 +4,7 @@
 */
 class Core 
 {
-	public static $con;
+	public $con;
 
 	function __construct()
 	{
