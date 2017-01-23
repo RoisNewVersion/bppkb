@@ -38,15 +38,17 @@ $app->check_session('admin');
                             <tbody>
                             <?php 
                             $no = 1;
-                            $karyawans = $app->con->get('tabel_karyawan');
-                            // $app->con->join('golongan g', "");
-                            // $karyawans = $app->con->get('karyawan k', null, 'k')
+                            // $karyawans = $app->con->get('tabel_karyawan');
+                            $app->con->join('tabel_gol g', "k.id_gol=g.id_gol");
+                            $app->con->join('tb_pendidikan p', "k.pendidikan=p.id_pendidikan");
+                            $karyawans = $app->con->get('tabel_karyawan k', null, 'k.*, g.gol, p.pendidikan');
+                            
                             foreach ($karyawans as $karyawan) { ?>
                                 <tr>
                                     <td><?= $no ?></td>
                                     <td><?= $karyawan['nip'] ?></td>
                                     <td><?= $karyawan['nama_karyawan']?></td>
-                                    <td><?= $karyawan['id_gol'] ?></td>
+                                    <td><?= $karyawan['gol'] ?></td>
                                     <td><?= $karyawan['jabatan'] ?></td>
                                     <td><?= $karyawan['tmp_lahir'] .', '.$karyawan['tgl_lahir'] ?> </td>
                                     <td><?= $karyawan['agama'] ?></td>
