@@ -129,7 +129,7 @@ $data = $app->con->getOne('tabel_karyawan');
 					<div class="form-group">
 						<label for="jml_anak" class="col-sm-2 control-label">Jumlah anak</label>
 						<div class="col-sm-4">
-							<input type="text" name="jml_anak" class="form-control" id="jml_anak" placeholder="Jumlah anak" value="<?= $data['tgl_lahir'] ?>">
+							<input type="text" name="jml_anak" class="form-control" id="jml_anak" placeholder="Jumlah anak" value="<?= $data['jml_anak'] ?>">
 						</div>
 					</div>
 					<div class="form-group">
