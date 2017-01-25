@@ -10,7 +10,7 @@
             <a href="index.php">Dashboard</a>
         </li>
         <li>
-            <a href="data_normatif.php">Data Normatif</a>
+            <a href="data_nominatif.php">Data Nominatif</a>
         </li>
         <li>
             <a href="mutasi_pegawai.php">Mutasi Pegawai</a>
