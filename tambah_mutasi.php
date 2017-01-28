@@ -83,8 +83,44 @@ $app->check_session('admin');
 		            				</div>
 		            			</div>
 		            			<div class="form-group">
+		            			<label class="col-sm-2 control-label" for="nippegawai">Data yang dilampirkan</label>
+		            				<div class="col-sm-5">
+		            					<input type="checkbox" name="data_terlampir[]" value="surat pindah dari pkk" > Surat pindah dari PPK kabupaten/Kota/Departemen/provinsi asal
+		            					
+		            				</div>
+		            				<div class="col-sm-5">
+		            					<input class="" type="checkbox" name="data_terlampir[]" value="FC SK CPNS legalisir" > FC SK CPNS legalisir
+		            				</div>
+		            				<div class="col-sm-5">
+		            					<input class="" type="checkbox" name="data_terlampir[]" value="FC SK PNS legalisir" > FC SK PNS legalisir
+		            				</div>
+		            				<div class="col-sm-5">
+		            					<input class="" type="checkbox" name="data_terlampir[]" value="FC SK KP terakhir legalisir" > FC SK KP terakhir legalisir
+		            				</div>
+		            				<div class="col-sm-5">
+		            					<input class="" type="checkbox" name="data_terlampir[]" value="FC konversi NIP Legalisir" > FC konversi NIP Legalisir
+		            				</div>
+		            			</div>
+		            			<div class="form-group">
+		            			<label class="col-sm-2 control-label" for="nippegawai">Data yang dilampirkan</label>
+		            				<div class="col-sm-5">
+		            					<input class="" type="checkbox" name="data_terlampir[]" value="FC Karpeg legalisir" > FC Karpeg legalisir
+		            				</div>
+		            				<div class="col-sm-5">
+		            					<input class="" type="checkbox" name="data_terlampir[]" value="FC Ijazah Legalisir" > FC Ijazah Legalisir
+		            				</div>
+		            				<div class="col-sm-5">
+		            					<input class="" type="checkbox" name="data_terlampir[]" value="FC DP3/SKP 2 Tahun terakhir" > FC DP3/SKP 2 Tahun terakhir
+		            				</div>
+		            				<div class="col-sm-5">
+		            					<input class="" type="checkbox" name="data_terlampir[]" value="Surat keterangan tidak pernah dijatuhi hukum disiplin sedang/berat dari pimpinan SKPD asal" > Surat keterangan tidak pernah dijatuhi hukum disiplin sedang/berat dari pimpinan SKPD asal
+		            				</div>
+		            			</div>
+
+		            			<div class="form-group">
 									<div class="col-sm-offset-2 col-sm-10">
 										<button type="submit" class="btn btn-info">Simpan</button>
+										<a href="mutasi_pegawai.php" class="btn btn-primary">Batal</a>
 									</div>
 								</div>
 		            		</form>
@@ -104,7 +140,7 @@ include 'layout/footer.php'
 <script type="text/javascript">
 	$(document).ready(function() {
 		$('#tmt_baru').datepicker({
-			dateFormat: 'yy-mm-dd',
+			dateFormat: 'dd-mm-yy',
 			chageMonth: true,
 			changeYear: true,
 		})

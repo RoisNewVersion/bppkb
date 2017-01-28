@@ -32,7 +32,8 @@ $app->check_session('admin');
 					</div>
 					<div class="form-group">
 						<div class="col-sm-offset-2 col-sm-10">
-							<button type="submit" class="btn btn-default">Simpan</button>
+							<button type="submit" class="btn btn-info">Simpan</button>
+							<a href="instansi.php" class="btn btn-primary">Batal</a>
 						</div>
 					</div>
 				</form>

@@ -26,7 +26,7 @@ $app->check_session('admin');
                 <div class="row">
                     <div class="col-lg-12">
                         <hr>
-                        <h2 class="title-header">Daftar Pegawai</h2>
+                        <h2 class="title-header">Daftar Pegawai Nominatif</h2>
                         <a class="btn btn-primary btn-sm tambah" href="tambah_karyawan.php">Tambah <span class="glyphicon glyphicon-plus" aria-hidden="true"></span></a>
                         <table id="tabelku" class="table table-bordered table-hover">
                             <thead>
@@ -67,7 +67,7 @@ $app->check_session('admin');
                                     <td><?= $karyawan['nip'] ?></td>
                                     <td><?= $karyawan['nama_karyawan']?></td>
                                     <td><?= $karyawan['tmp_lahir'] ?> </td>
-                                    <td><?= $karyawan['tgl_lahir'] ?></td>
+                                    <td><?= date('d-m-Y', strtotime($karyawan['tgl_lahir']))  ?></td>
                                     <td><?= $karyawan['agama'] ?></td>
                                     <td><?= $karyawan['jk'] ?></td>
                                     <td><?= $karyawan['jabatan'] ?></td>

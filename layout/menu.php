@@ -16,7 +16,7 @@
             <a href="mutasi_pegawai.php">Mutasi Pegawai</a>
         </li>
         <li>
-            <a href="promosi_jabatan.php">Promosi Jabatan</a>
+            <a href="promosi_karyawan.php">Promosi Jabatan</a>
         </li>
         <li>
             <div class="dropdown">
@@ -26,7 +26,7 @@
             </a>
 
             <ul class="dropdown-menu" aria-labelledby="dLabel">
-                <a href="karyawan.php">Data Karyawan</a>
+                <a href="data_nominatif.php">Data Karyawan</a>
                 <a href="golongan.php">Data Golongan</a>
                 <a href="instansi.php">Data Instansi</a>
                 <a href="pendidikan.php">Data Pendidikan</a>

@@ -31,14 +31,18 @@ $app->check_session('admin');
                         <table id="tabelku" class="table table-bordered table-hover">
                             <thead>
                                 <tr>
-                                    <th>No</th>
-                                    <th>No Surat</th>
-                                    <th>NIP</th>
-                                    <th>Nama Karyawan</th>
-                                    <th>Dinas lama</th>
-                                    <th>Dinas baru</th>
-                                    <th>TMT baru</th>
-                                    <th>Aksi</th>
+                                    <th class="text-center" rowspan="2">No</th>
+                                    <th class="text-center" rowspan="2">No Surat</th>
+                                    <th class="text-center" rowspan="2">NIP</th>
+                                    <th class="text-center" rowspan="2">Nama Karyawan</th>
+                                    <th class="text-center" colspan="2">Instansi</th>
+                                    <th class="text-center" rowspan="2">TMT baru</th>
+                                    <th class="text-center" rowspan="2">Aksi</th>
+                                </tr>
+                                <tr>
+                                    <th class="text-center">Dinas lama</th>
+                                    <th class="text-center">Dinas baru</th>
+                                </tr>
                             </thead>
                             <tbody>
                             <?php 

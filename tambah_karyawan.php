@@ -114,9 +114,9 @@ $app->check_session('admin');
 						<div class="col-sm-4">
 							<select name="pendidikan" class="form-control" id="pendidikan" required="">
 								<?php 
-								$data = $app->con->get('tb_pendidikan', null, array('id_pendidikan', 'pendidikan'));
+								$data = $app->con->get('tb_pendidikan');
 								foreach($data as $d){
-									echo '<option value="'.$d['id_pendidikan'].'">'.$d['pendidikan'].'</option>';
+									echo '<option value="'.$d['id_pendidikan'].'">'.$d['pendidikan'].' - '.$d['jurusan'].'</option>';
 									} ?>
 							</select>
 						</div>
@@ -133,7 +133,7 @@ $app->check_session('admin');
 							<input type="text" name="no_karpeg" class="form-control" id="no_karpeg" placeholder="No karpeg" required="">
 						</div>
 					</div>
-					<div class="form-group">
+					<!--<div class="form-group">
 						<label for="status_aktif" class="col-sm-2 control-label">Status Aktif</label>
 						<div class="col-sm-4">
 							<select name="status_aktif" class="form-control tgl" id="status_aktif" required="">
@@ -148,9 +148,11 @@ $app->check_session('admin');
 							<input type="text" name="keterangan" class="form-control " id="keterangan" placeholder="Keterangan" required="">
 						</div>
 					</div>
+					-->
 					<div class="form-group">
 						<div class="col-sm-offset-2 col-sm-10">
-							<button type="submit" class="btn btn-default">Simpan</button>
+							<button type="submit" class="btn btn-info">Simpan</button>
+							<a href="karyawan.php" class="btn btn-primary">Batal</a>
 						</div>
 					</div>
 				</form>
@@ -166,7 +168,7 @@ include 'layout/footer.php'
 <script type="text/javascript">
 	$(document).ready(function() {
 		$('.tgl').datepicker({
-			dateFormat: 'yy-mm-dd',
+			dateFormat: 'dd-mm-yy',
 			changeMonth: true,
 		    changeYear: true
 		});

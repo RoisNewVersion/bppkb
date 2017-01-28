@@ -51,7 +51,7 @@ $app->check_session('admin');
                                     <td><?= $karyawan['nama_karyawan']?></td>
                                     <td><?= $karyawan['gol'] ?></td>
                                     <td><?= $karyawan['jabatan'] ?></td>
-                                    <td><?= $karyawan['tmp_lahir'] .', '.$karyawan['tgl_lahir'] ?> </td>
+                                    <td><?= $karyawan['tmp_lahir'] .', '.date('d-m-Y', strtotime($karyawan['tgl_lahir'])) ?> </td>
                                     <td><?= $karyawan['agama'] ?></td>
                                     <td><?= $karyawan['jk'] ?></td>
                                     <td><?= $karyawan['status_nikah'] ?></td>

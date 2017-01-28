@@ -9,10 +9,17 @@ $app->check_session('admin');
 $dataInput = array(
 	'id_karyawan' => $_POST['id_karyawan'],
 	'no_surat'=>strtoupper($_POST['no_surat']),
-	'tmt_baru'=>strtoupper($_POST['tmt_baru']),
+	'tmt_baru'=>date('Y-m-d',strtotime($_POST['tmt_baru'])),
 	'dinas_lama'=>$_POST['dinas_lama'],
-	'dinas_baru'=>$_POST['dinas_baru']
+	'dinas_baru'=>$_POST['dinas_baru'],
+	'data_terlampir'=>json_encode($_POST['data_terlampir'])
 );
+// echo '<pre>';
+// print_r($dataInput);
+// print_r($_POST['data_terlampir']);
+// echo ;
+// echo '</pre>';
+// die();
 // masukan ke tabel mutasi
 $cek = $app->con->insert('tabel_mutasi', $dataInput);
 if ($cek) {
