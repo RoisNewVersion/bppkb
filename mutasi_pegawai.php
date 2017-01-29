@@ -69,7 +69,7 @@ $app->check_session('admin');
                                     
                                     <th>
                                         <a title="Edit" class="btn btn-info btn-xs" href="cetak_mutasi.php?id=<?= $mutasi['id_mutasi']?> ">Cetak <span class="glyphicon glyphicon-edit" aria-hidden="true"></span></a>
-                                        <!-- <a title="Hapus" onclick="return confirm('Yakin hapus?')" class="btn btn-danger btn-xs" href="hapus_master.php?type=mutasi&id=<?= $mutasi['id_mutasi']?> ">Hapus <span class="glyphicon glyphicon-trash" aria-hidden="true"></span></a> -->
+                                        <a title="Hapus" onclick="return confirm('Yakin hapus?')" class="btn btn-danger btn-xs" href="hapus.php?type=mutasi&id=<?= $mutasi['id_mutasi']?> ">Hapus <span class="glyphicon glyphicon-trash" aria-hidden="true"></span></a>
                                     </th>
                                 </tr>
                             <?php $no++;
@@ -78,6 +78,7 @@ $app->check_session('admin');
                         </table>
                     </div>
                 </div>
+                <button class="btn btn-primary" onclick="cetak_laporan_mutasi()">Cetak Laporan</button>
             </div>
         </div>
         <!-- /#page-content-wrapper -->

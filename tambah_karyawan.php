@@ -130,7 +130,7 @@ $app->check_session('admin');
 					<div class="form-group">
 						<label for="no_karpeg" class="col-sm-2 control-label">No karpeg</label>
 						<div class="col-sm-4">
-							<input type="text" name="no_karpeg" class="form-control" id="no_karpeg" placeholder="No karpeg" required="">
+							<input type="text" name="no_karpeg" class="form-control" id="no_karpeg" placeholder="No karpeg" >
 						</div>
 					</div>
 					<!--<div class="form-group">

@@ -187,7 +187,8 @@ $data = $app->con->getOne('tabel_karyawan');
 					</div>
 					<div class="form-group">
 						<div class="col-sm-offset-2 col-sm-10">
-							<button type="submit" class="btn btn-info">Edit</button>
+							<button type="submit" class="btn btn-info btn-sm">Edit</button>
+							<a href="data_nominatif.php" class="btn btn-primary btn-sm">Batal</a>
 						</div>
 					</div>
 				</form>

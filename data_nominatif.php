@@ -86,6 +86,7 @@ $app->check_session('admin');
                         </table>
                     </div>
                 </div>
+                <button class="btn btn-primary" onclick="cetak_nominatif()">Cetak Laporan</button>
             </div>
         </div>
         <!-- /#page-content-wrapper -->
@@ -96,4 +97,13 @@ include 'layout/footer.php'
     $(document).ready(function() {
         $('#tabelku').DataTable();
     });
+
+    function cetak_nominatif() {
+        var left = (screen.width/2) - (800/2);
+        var right = (screen.height/2) - (640/2);
+
+        var url = 'cetak_karyawan.php';
+
+        window.open(url, '', 'width=800, height=640, scrollbars=yes, left='+left+', right='+right+'');
+    }
 </script>

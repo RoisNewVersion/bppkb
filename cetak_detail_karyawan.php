@@ -1,42 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Cetak detail karyawan</title>
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link href="css/simple-sidebar.css" rel="stylesheet">
+</head>
+<body onload="cetak()">
 <?php 
-session_start();
-include 'layout/header.php';
-include 'layout/menu.php';
 include 'system/fungsi.php';
 $app = new Core();
-$app->check_session('admin');
-
-$id = $_GET['detail'];
+// $app->check_session('admin');
+$id = $_GET['id'];
 // $app->con->where('id_karyawan', $id);
 // $data = $app->con->getOne('tabel_karyawan');
 $app->con->join('tabel_gol g', "k.id_gol=g.id_gol");
 $app->con->join('tb_pendidikan p', "k.pendidikan=p.id_pendidikan");
 $app->con->where('k.id_karyawan', $id);
 $karyawan = $app->con->getOne('tabel_karyawan k', null, 'k.*, g.gol, p.pendidikan');
-
-?>
-
-<!-- Page Content -->
+ ?>
+<!-- <button onclick="cetak()">Cetak</button> -->
 <div id="page-content-wrapper">
 	<div class="row">
-		<div class="col-sm-2">
-			<img width="60" height="70" src="images/logokendal.jpg" class="img-responsive" alt="">
-		</div>
-		<div class="col-sm-8">
-			<h3 class="title-header">Detail Pegawai Nominatif</h3>
-		</div>
-		<div class="col-sm-2">
-			<img width="60" height="70" src="images/logo-kb.jpg" class="img-responsive" alt="">
-		</div>
-
+		<table width="100%">
+			<tr>
+				<td><img width="60" height="70" src="images/logokendal.jpg" class="img-responsive" alt=""></td>
+				<td><h3 class="title-header">Detail Pegawai Nominatif</h3></td>
+				<td><img width="60" height="70" src="images/logo-kb.jpg" class="img-responsive" alt=""></td>
+			</tr>
+		</table>
 	</div>
-	<div class="container-fluid">
-		<div class="row">
-			<div class="col-lg-12">
-				<hr>
-				<div class="panel panel-default">
-					<div class="panel-body">
-						<table class="table">
+	<br>
+	<table class="table">
 							<tr>
 								<td>NIP</td>
 								<td>:</td>
@@ -143,34 +139,11 @@ $karyawan = $app->con->getOne('tabel_karyawan k', null, 'k.*, g.gol, p.pendidika
 								<td><?= $karyawan['keterangan'] ?></td>
 							</tr>
 						</table>
-					<div class="row">
-						<div class="col-sm-4">
-							<a href="data_nominatif.php" class="btn btn-sm btn-primary">Kembali</a>
-						</div>
-						<div class="col-sm-4">
-							<button onclick="cetak()" class="btn btn-default btn-sm">Cetak</button>
-						</div>
-						<div class="col-sm-4">
-							<a href="edit_karyawan.php?id=<?= $id ?>" class="btn btn-info btn-sm">Edit</a>
-						</div>
-					</div>
-				</div>
-
-			</div>
-		</div>
-	</div>
 </div>
-<!-- /#page-content-wrapper -->
-<?php 
-include 'layout/footer.php'
-?>
+</body>
 <script type="text/javascript">
 	function cetak() {
-		var left = (screen.width/2) - (800/2);
-		var right = (screen.height/2) - (640/2);
-
-		var url = 'cetak_detail_karyawan.php?id=<?= $id ?>';
-
-		window.open(url, '', 'width=800, height=640, scrollbars=yes, left='+left+', right='+right+'');
+		window.print();
 	}
 </script>
+</html>

@@ -18,11 +18,11 @@ $app->check_session('admin');
                     <thead>
                         <tr>
                             <th>No</th>
-                            <th>TMT Jabatan</th>
+                            <!-- <th>TMT Jabatan</th> -->
                             <th>Golongan</th>
-                            <th>TMT Golongan</th>
+                            <!-- <th>TMT Golongan</th>
                             <th>MK Tahun</th>
-                            <th>MK bulan</th>
+                            <th>MK bulan</th> -->
                             <th>Aksi</th>
                         </tr>
                     </thead>
@@ -33,15 +33,15 @@ $app->check_session('admin');
                         foreach ($golongans as $golongan) { ?>
                         <tr>
                             <td><?= $no ?></td>
-                            <td><?= $golongan['tmt_jabatan'] ?></td>
+                            <!-- <td><?= $golongan['tmt_jabatan'] ?></td> -->
                             <td><?= $golongan['gol']?></td>
-                            <td><?= $golongan['tmt_gol']?></td>
+                            <!-- <td><?= $golongan['tmt_gol']?></td>
                             <td><?= $golongan['mk_thn']?></td>
-                            <td><?= $golongan['mk_bln']?></td>
-                            <th>
+                            <td><?= $golongan['mk_bln']?></td> -->
+                            <td>
                                 <a title="Edit" class="btn btn-info btn-xs" href="edit_golongan.php?id=<?= $golongan['id_gol']?> ">Edit <span class="glyphicon glyphicon-edit" aria-hidden="true"></span></a>
                                 <a title="Hapus" onclick="return confirm('Yakin hapus?')" class="btn btn-danger btn-xs" href="hapus_master.php?type=golongan&id=<?= $golongan['id_gol']?> ">Hapus <span class="glyphicon glyphicon-trash" aria-hidden="true"></span></a>
-                            </th>
+                            </td>
                         </tr>
                         <?php $no++;
                     } ?>

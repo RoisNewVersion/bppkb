@@ -8,13 +8,13 @@ $type = $_GET['type'];
 
 switch ($type) {
 
-	case 'pendidikan':
-		$app->con->where('id_pendidikan', $id);
-		$del = $app->con->delete('tb_pendidikan');
+	case 'mutasi':
+		$app->con->where('id_mutasi', $id);
+		$del = $app->con->delete('tabel_mutasi');
 		if ($del) {
 			// echo json_encode('Berhasil hapus');
 			echo "<script>alert('Hapus berhasil')</script>";
-			echo "<script>window.location.href='pendidikan.php'</script>";
+			echo "<script>window.location.href='mutasi_pegawai.php'</script>";
 		} else {
 			// echo json_encode('Gagal hapus');
 			echo "<script>alert('Hapus gagal')</script>";
