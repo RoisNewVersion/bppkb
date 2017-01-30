@@ -146,12 +146,12 @@ $data = $app->con->getOne('tabel_karyawan');
 						<div class="col-sm-4">
 							<select name="pendidikan" class="form-control" id="pendidikan" required="">
 								<?php 
-								$datapend = $app->con->get('tb_pendidikan', null, array('id_pendidikan', 'pendidikan'));
+								$datapend = $app->con->get('tb_pendidikan');
 								foreach($datapend as $d){
 									if ($d['id_pendidikan'] == $data['pendidikan']) {
-										echo '<option value="'.$d['id_pendidikan'].'" selected>'.$d['pendidikan'].'</option>';
+										echo '<option value="'.$d['id_pendidikan'].'" selected>'.$d['pendidikan'].' - '.$d['jurusan'].'</option>';
 									} else {
-										echo '<option value="'.$d['id_pendidikan'].'">'.$d['pendidikan'].'</option>';
+										echo '<option value="'.$d['id_pendidikan'].'">'.$d['pendidikan'].' - '.$d['jurusan'].'</option>';
 									}
 									
 									} ?>

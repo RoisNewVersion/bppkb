@@ -75,8 +75,8 @@ $app->check_session('admin');
                                     <td><?= $mutasi['tmt_gol_baru'] ?> </td>
                                     <td><?= $mutasi['tmt_jabatan_baru'] ?> </td>
                                     <th>
-                                        <a title="Edit" class="btn btn-info btn-xs" href="cetak_mutasi.php?id=<?= $mutasi['id_mutasi']?> ">Cetak <span class="glyphicon glyphicon-edit" aria-hidden="true"></span></a>
-                                        <a title="Hapus" onclick="return confirm('Yakin hapus?')" class="btn btn-danger btn-xs" href="hapus_master.php?type=mutasi&id=<?= $mutasi['id_mutasi']?> ">Hapus <span class="glyphicon glyphicon-trash" aria-hidden="true"></span></a>
+                                        <a onclick="cetak_detail_promosi('<?= $mutasi['id_promosi'] ?>')" title="Cetak" class="btn btn-info btn-xs" ">Cetak <span class="glyphicon glyphicon-edit" aria-hidden="true"></span></a>
+                                        <a title="Hapus" onclick="return confirm('Yakin hapus?')" class="btn btn-danger btn-xs" href="hapus_.php?type=mutasi&id=<?= $mutasi['id_mutasi']?> ">Hapus <span class="glyphicon glyphicon-trash" aria-hidden="true"></span></a>
                                     </th>
                                 </tr>
                             <?php $no++;
@@ -85,7 +85,7 @@ $app->check_session('admin');
                         </table>
                     </div>
                 </div>
-                <button class="btn btn-primary" onclick="cetak_nominatif()">Cetak Laporan</button>
+                <button class="btn btn-primary" onclick="cetak_promosi()">Cetak Laporan</button>
             </div>
         </div>
         <!-- /#page-content-wrapper -->
@@ -96,4 +96,20 @@ include 'layout/footer.php'
     $(document).ready(function() {
         //$('#tabelku').DataTable();
     });
+    function cetak_detail_promosi(r) {
+        var left = (screen.width/2) - (800/2);
+        var right = (screen.height/2) - (640/2);
+
+        var url = 'cetak_detail_promosi.php?id='+r;
+
+        window.open(url, '', 'width=800, height=640, scrollbars=yes, left='+left+', right='+right+'');
+    }
+    function cetak_promosi() {
+        var left = (screen.width/2) - (800/2);
+        var right = (screen.height/2) - (640/2);
+
+        var url = 'cetak_promosi.php';
+
+        window.open(url, '', 'width=800, height=640, scrollbars=yes, left='+left+', right='+right+'');
+    }
 </script>

@@ -20,6 +20,10 @@ $dataInput = array(
 // masukan ke tabel promosi
 $cek = $app->con->insert('tabel_promosi', $dataInput);
 if ($cek) {
+	// update kolom gol dan jabatan di karyawan
+	$app->con->where('id_karyawan', $dataInput['id_karyawan']);
+	$app->con->update('tabel_karyawan', array('id_gol'=>$dataInput['gol_baru'], 'jabatan'=>$dataInput['jabatan_baru']));
+	
 	// echo json_encode(array('pesan'=>"Tambah berhasil", 'type'=>'success'));
 	echo "<script>alert('Tambah berhasil')</script>";
 	echo "<script>window.location.href='promosi_karyawan.php'</script>";

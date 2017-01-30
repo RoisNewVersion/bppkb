@@ -68,7 +68,7 @@ $app->check_session('admin');
                                     <td><?= $mutasi['tmt_baru'] ?> </td>
                                     
                                     <th>
-                                        <a title="Edit" class="btn btn-info btn-xs" href="cetak_mutasi.php?id=<?= $mutasi['id_mutasi']?> ">Cetak <span class="glyphicon glyphicon-edit" aria-hidden="true"></span></a>
+                                        <a onclick="cetak_detail_mutasi('<?= $mutasi['id_mutasi'] ?>');" title="Cetak" class="btn btn-info btn-xs">Cetak <span class="glyphicon glyphicon-edit" aria-hidden="true"></span></a>
                                         <a title="Hapus" onclick="return confirm('Yakin hapus?')" class="btn btn-danger btn-xs" href="hapus.php?type=mutasi&id=<?= $mutasi['id_mutasi']?> ">Hapus <span class="glyphicon glyphicon-trash" aria-hidden="true"></span></a>
                                     </th>
                                 </tr>
@@ -89,4 +89,21 @@ include 'layout/footer.php'
     $(document).ready(function() {
         $('#tabelku').DataTable();
     });
+    function cetak_laporan_mutasi() {
+        var left = (screen.width/2) - (800/2);
+        var right = (screen.height/2) - (640/2);
+
+        var url = 'cetak_mutasi.php';
+
+        window.open(url, '', 'width=800, height=640, scrollbars=yes, left='+left+', right='+right+'');
+    }
+
+    function cetak_detail_mutasi(r) {
+        var left = (screen.width/2) - (800/2);
+        var right = (screen.height/2) - (640/2);
+
+        var url = 'cetak_detail_mutasi.php?id='+r;
+
+        window.open(url, '', 'width=800, height=640, scrollbars=yes, left='+left+', right='+right+'');
+    }
 </script>
