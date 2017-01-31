@@ -37,6 +37,12 @@ $app->check_session('admin');
 						</div>
 					</div>
 					<div class="form-group">
+						<label for="tmt_jabatan" class="col-sm-2 control-label">TMT Jabatan</label>
+						<div class="col-sm-4">
+							<input type="text" name="tmt_jabatan" class="form-control tgl" id="tmt_jabatan" placeholder="TMT Jabatan" >
+						</div>
+					</div>
+					<div class="form-group">
 						<label for="id_gol" class="col-sm-2 control-label">Golongan</label>
 						<div class="col-sm-4">
 							<select name="id_gol" class="form-control" id="id_gol" required="">
@@ -46,6 +52,12 @@ $app->check_session('admin');
 									echo '<option value="'.$d['id_gol'].'">'.$d['gol'].'</option>';
 									} ?>
 							</select>
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="tmt_golongan" class="col-sm-2 control-label">TMT Golongan</label>
+						<div class="col-sm-4">
+							<input type="text" name="tmt_golongan" class="form-control tgl" id="tmt_golongan" placeholder="TMT Golongan">
 						</div>
 					</div>
 					<div class="form-group">
@@ -131,6 +143,17 @@ $app->check_session('admin');
 						<label for="no_karpeg" class="col-sm-2 control-label">No karpeg</label>
 						<div class="col-sm-4">
 							<input type="text" name="no_karpeg" class="form-control" id="no_karpeg" placeholder="No karpeg" >
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="mk_bln" class="col-sm-2 control-label">MK Bulan</label>
+						<div class="col-sm-4">
+							<input type="text" name="mk_bln" class="form-control" id="mk_bln" placeholder="MK Bulan" >
+						</div>
+					</div><div class="form-group">
+						<label for="mk_thn" class="col-sm-2 control-label">MK tahun</label>
+						<div class="col-sm-4">
+							<input type="text" name="mk_thn" class="form-control" id="mk_thn" placeholder="MK tahun" >
 						</div>
 					</div>
 					<!--<div class="form-group">

@@ -9,11 +9,7 @@ $type = $_POST['type'];
 
 // jadikan inputan jd array
 $dataInput = array(
-	'tmt_jabatan'=>$_POST['tmt_jabatan'],
 	'gol'=>strtoupper($_POST['gol']),
-	'tmt_gol'=>$_POST['tmt_gol'],
-	'mk_thn'=>strtoupper($_POST['mk_thn']),
-	'mk_bln'=>strtoupper($_POST['mk_bln'])
 	);
 
 switch ($type) {

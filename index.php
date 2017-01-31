@@ -14,8 +14,11 @@ $app->check_session('admin');
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-lg-12">
-                        <h1>DASBOARD BPPKB </h1>
-                        <p>iki Contoh gan</p>
+                        <h1 class="title-header">Sistem Pendataan Pegawai Mutasi dan Promosi Jabatan </h1>
+                        <br><br>
+                        <p>
+                            <center><img src="images/kendal.jpg" alt="Kendal" title="Kendal" class="img-responsive"><center>
+                        </p>
                         
                     </div>
                 </div>

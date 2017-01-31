@@ -31,6 +31,12 @@ $app->check_session('admin');
 						</div>
 					</div>
 					<div class="form-group">
+						<label for="alamat" class="col-sm-2 control-label">Alamat</label>
+						<div class="col-sm-4">
+							<input type="text" name="alamat" class="form-control" id="alamat" placeholder="Alamat" required="">
+						</div>
+					</div>
+					<div class="form-group">
 						<div class="col-sm-offset-2 col-sm-10">
 							<button type="submit" class="btn btn-info">Simpan</button>
 							<a href="instansi.php" class="btn btn-primary">Batal</a>

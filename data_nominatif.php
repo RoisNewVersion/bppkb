@@ -11,14 +11,15 @@ $app->check_session('admin');
         <div id="page-content-wrapper">
             <div class="row">
                 <div class="col-sm-2">
-                    <img width="60" height="70" src="images/logokendal.jpg" class="img-responsive" alt="">
+                    <img width="70" height="80" src="images/logokendal.jpg" class="img-responsive" alt="">
                 </div>
                 <div class="col-sm-8">
                     <h3 class="title-header">Daftar Pegawai Nominatif</h3>
                     <h3 class="title-header">Badan Pemberdayaan Perempuan dan Keluarga Berencana Kabupaten Kendal</h3>
+                    <h4 class="title-header">Jl. Soekarno hatta Kotak Pos 107 Tlp/Fax (0294)381143</h4>
                 </div>
                 <div class="col-sm-2">
-                    <img width="60" height="70" src="images/logo-kb.jpg" class="img-responsive" alt="">
+                    <img width="70" height="80" src="images/logo-kb.jpg" class="img-responsive" alt="">
                 </div>
 
             </div>

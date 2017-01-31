@@ -42,6 +42,12 @@ $data = $app->con->getOne('tabel_karyawan');
 						</div>
 					</div>
 					<div class="form-group">
+						<label for="tmt_jabatan" class="col-sm-2 control-label">TMT Jabatan</label>
+						<div class="col-sm-4">
+							<input type="text" name="tmt_jabatan" class="form-control tgl" id="tmt_jabatan" placeholder="TMT Jabatan" value="<?= $data['tmt_jabatan'] ?>">
+						</div>
+					</div>
+					<div class="form-group">
 						<label for="id_gol" class="col-sm-2 control-label">Golongan</label>
 						<div class="col-sm-4">
 							<select name="id_gol" class="form-control" id="id_gol" required="">
@@ -56,6 +62,12 @@ $data = $app->con->getOne('tabel_karyawan');
 									
 									} ?>
 							</select>
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="tmt_golongan" class="col-sm-2 control-label">TMT Golongan</label>
+						<div class="col-sm-4">
+							<input type="text" name="tmt_golongan" class="form-control tgl" id="tmt_golongan" placeholder="TMT Golongan" value="<?= $data['tmt_gol'] ?>">
 						</div>
 					</div>
 					<div class="form-group">
@@ -167,7 +179,18 @@ $data = $app->con->getOne('tabel_karyawan');
 					<div class="form-group">
 						<label for="no_karpeg" class="col-sm-2 control-label">No karpeg</label>
 						<div class="col-sm-4">
-							<input type="text" name="no_karpeg" class="form-control" id="no_karpeg" placeholder="No karpeg" required="" value="<?= $data['no_karpeg'] ?>">
+							<input type="text" name="no_karpeg" class="form-control" id="no_karpeg" placeholder="No karpeg" value="<?= $data['no_karpeg'] ?>">
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="mk_bln" class="col-sm-2 control-label">MK Bulan</label>
+						<div class="col-sm-4">
+							<input type="text" name="mk_bln" class="form-control" id="mk_bln" placeholder="MK Bulan" value="<?= $data['mk_bln'] ?>">
+						</div>
+					</div><div class="form-group">
+						<label for="mk_thn" class="col-sm-2 control-label">MK tahun</label>
+						<div class="col-sm-4">
+							<input type="text" name="mk_thn" class="form-control" id="mk_thn" placeholder="MK tahun" value="<?= $data['mk_thn'] ?>">
 						</div>
 					</div>
 					<div class="form-group">
@@ -204,7 +227,7 @@ include 'layout/footer.php'
 <script type="text/javascript">
 	$(document).ready(function() {
 		$('.tgl').datepicker({
-			dateFormat: 'yy-mm-dd',
+			dateFormat: 'dd-mm-yy',
 			changeMonth: true,
 		    changeYear: true
 		});

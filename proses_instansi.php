@@ -10,7 +10,8 @@ $type = $_POST['type'];
 // jadikan inputan jd array
 $dataInput = array(
 	'nama_ins'=>strtoupper($_POST['nama_instansi']),
-	'kota'=>strtoupper($_POST['kota'])
+	'kota'=>strtoupper($_POST['kota']),
+	'alamat'=>ucwords($_POST['alamat'])
 	);
 
 switch ($type) {

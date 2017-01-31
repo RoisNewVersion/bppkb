@@ -31,7 +31,11 @@ $dataInput = array(
 	'thn_lulus'=>$_POST['thn_lulus'],
 	'no_karpeg'=>$_POST['no_karpeg'],
 	'status_aktif'=>$status_aktif,
-	'keterangan'=>$keterangan
+	'keterangan'=>$keterangan,
+	'tmt_jabatan'=>date('Y-m-d', strtotime($_POST['tmt_jabatan'])),
+	'tmt_gol'=>date('Y-m-d', strtotime($_POST['tmt_golongan'])),
+	'mk_thn'=>strtoupper($_POST['mk_thn']),
+	'mk_bln'=>strtoupper($_POST['mk_bln'])
 	);
 
 switch ($type) {
