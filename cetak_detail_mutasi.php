@@ -18,9 +18,13 @@ $id = $_GET['id'];
 	<div class="row">
 		<table width="100%">
 			<tr>
-				<td><img width="60" height="70" src="images/logokendal.jpg" class="img-responsive" alt=""></td>
-				<td><h3 class="title-header">Data Detail Mutasi Pegawai</h3></td>
-				<td><img width="60" height="70" src="images/logo-kb.jpg" class="img-responsive" alt=""></td>
+				<td><img width="70" height="80" src="images/logokendal.jpg" class="img-responsive" alt=""></td>
+				<td>
+                    <h3 class="title-header">Data Detail Mutasi Pegawai</h3>
+                    <h3 class="title-header">Badan Pemberdayaan Perempuan dan Keluarga Berencana Kabupaten Kendal</h3>
+                    <h4 class="title-header">Jl. Soekarno hatta Kotak Pos 107 Tlp/Fax (0294)381143</h4>
+                </td>
+				<td><img width="70" height="80" src="images/logo-kb.jpg" class="img-responsive" alt=""></td>
 			</tr>
 		</table>
 	</div>

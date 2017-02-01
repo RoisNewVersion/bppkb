@@ -101,7 +101,7 @@ include 'layout/footer.php'
         var left = (screen.width/2) - (800/2);
         var right = (screen.height/2) - (640/2);
 
-        var url = 'cetak_detail_promosi.php?id='+r;
+        var url = 'cetak_detail_promosii.php?id='+r;
 
         window.open(url, '', 'width=800, height=640, scrollbars=yes, left='+left+', right='+right+'');
     }
