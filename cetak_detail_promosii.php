@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Cetak detail karyawan</title>
+	<title>Cetak detail promosi karyawan</title>
 	<link rel="stylesheet" href="css/bootstrap.min.css">
 	<link href="css/simple-sidebar.css" rel="stylesheet">
 	<style type="text/css">
@@ -22,7 +22,7 @@
 		}
 	</style>
 </head>
-<body onload="">
+<body onload="cetak()">
 	<?php 
 	include 'system/fungsi.php';
 	$app = new Core();
@@ -64,15 +64,18 @@
 	<p class="body-msg">Yang bertanda tangan dibawah ini :</p>
 
 	<table class="body-msg tabel-nama">
+		<?php 
+			$kepala = $app->con->rawQuery('select * from tabel_karyawan where jabatan like "kepala badan pemberdayaan%" limit 1');
+		?>
 		<tr>
 			<td>Nama </td>
 			<td>:</td>
-			<td>Ir. DIAH ANING BUDIARTI, M.Si</td>
+			<td><?= $kepala[0]['nama_karyawan'] ?></td>
 		</tr>
 		<tr>
 			<td>Jabatan</td>
 			<td>:</td>
-			<td>Kepala Badan Pemberdayaan Perempuan dan Keluarga Berenca Kabupaten Kendal</td>
+			<td><?= $kepala[0]['jabatan'] ?></td>
 		</tr>
 	</table>
 
@@ -120,9 +123,9 @@
 	</table>
 	<br><br><br><br><br>
 	<table class="title-header">
-		<tr><td><u>Ir. DIAH ANING BUDIARTI, M.Si</u></td></tr>
+		<tr><td><u><?= $kepala[0]['nama_karyawan'] ?></u></td></tr>
 		<tr><td>Pembina Utama Muda</td></tr>
-		<tr><td>19601220 198108 2 001</td></tr>
+		<tr><td><?= $kepala[0]['nip'] ?></td></tr>
 	</table>
 	</div>
 </div>
